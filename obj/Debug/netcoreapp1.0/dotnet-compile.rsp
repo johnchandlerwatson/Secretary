@@ -1,5 +1,5 @@
---temp-output:c:\Projects\secretaryapp\obj\Debug\netcoreapp1.0\
---out:c:\Projects\secretaryapp\bin\Debug\netcoreapp1.0\secretaryapp.dll
+--temp-output:C:\Projects\secretaryapp\obj\Debug\netcoreapp1.0\
+--out:C:\Projects\secretaryapp\bin\Debug\netcoreapp1.0\secretaryapp.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -87,7 +87,7 @@
 --reference:C:\Users\wats1109\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\wats1109\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\wats1109\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
-c:\Projects\secretaryapp\Applicant.cs
-c:\Projects\secretaryapp\Program.cs
-c:\Projects\secretaryapp\Test.cs
-c:\Projects\secretaryapp\TestsRunner.cs
+C:\Projects\secretaryapp\Applicant.cs
+C:\Projects\secretaryapp\Program.cs
+C:\Projects\secretaryapp\Test.cs
+C:\Projects\secretaryapp\TestsRunner.cs

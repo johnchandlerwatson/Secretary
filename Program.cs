@@ -10,7 +10,7 @@ namespace SecretaryApp
             args = new string[3];
             args[0] = "100";
             args[1] = "100";
-            args[2] = ".5";
+            args[2] = ".3";
 
             var numberOfTests = GetArgInt(args, 0);
             var numberOfApplicants = GetArgInt(args, 1);
@@ -21,7 +21,8 @@ namespace SecretaryApp
             watch.Start();
             testRunner.Run();
             watch.Stop();
-            Console.WriteLine($"The tests ran in {watch.Elapsed.Seconds}.{watch.Elapsed.Milliseconds} seconds.");
+            Console.WriteLine($"The tests ran in {watch.Elapsed.Milliseconds} milliseconds.");
+            Console.ReadKey();
         }
 
         private static int GetArgInt(string[] args, int index)
