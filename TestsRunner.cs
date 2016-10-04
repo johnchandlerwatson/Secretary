@@ -38,8 +38,8 @@ namespace SecretaryApp
                 }
             }
             var optimalCandidatePercent = (decimal) countOfBestSelections/Tests.Count;
-            Console.WriteLine($"There were {NumberOfUnluckyApplicants()} unlucky interns.");
-            Console.WriteLine($"The ideal intern was selected in {optimalCandidatePercent*100}% of the tests.");
+            Console.WriteLine($"There were {NumberOfUnluckyApplicants()} unlucky interns per test.");
+            Console.WriteLine($"The ideal intern was selected in {optimalCandidatePercent*100}% of the tests {countOfBestSelections}/{Tests.Count}.");
         }
 
         private Applicant GetTheWinner(Test test)

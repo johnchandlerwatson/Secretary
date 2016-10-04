@@ -7,10 +7,10 @@ namespace SecretaryApp
     {
         public static void Main(string[] args)
         {
-            args = new string[3];
-            args[0] = "100";
-            args[1] = "100";
-            args[2] = ".3";
+            // args = new string[3];
+            // args[0] = "100";
+            // args[1] = "100";
+            // args[2] = ".3";
 
             var numberOfTests = GetArgInt(args, 0);
             var numberOfApplicants = GetArgInt(args, 1);
