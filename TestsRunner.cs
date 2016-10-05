@@ -22,6 +22,7 @@ namespace SecretaryApp
         public void Run()
         {
             var countOfBestSelections = 0;
+            var winnerPositions = new List<int>();
             foreach (var test in Tests)
             {
                 var winner = GetTheWinner(test);
@@ -31,15 +32,25 @@ namespace SecretaryApp
                     var highestRating = test.Applicants.Max(x => x.Rating);
                     Console.WriteLine($"Winner: Intern {winner.Order} Rating: {winner.Rating} Max: {highestRating}");
                     if (winner.Rating == highestRating) countOfBestSelections++;
+                    winnerPositions.Add(winner.Order);
                 }
                 else 
                 {
                     Console.WriteLine("There was no winner that round.");
                 }
-            }
+            }  
+            PrintFinalComments(countOfBestSelections, winnerPositions);
+        }
+
+        private void PrintFinalComments(int countOfBestSelections, List<int> winnerPositions)
+        {
             var optimalCandidatePercent = (decimal) countOfBestSelections/Tests.Count;
             Console.WriteLine($"There were {NumberOfUnluckyApplicants()} unlucky interns per test.");
             Console.WriteLine($"The ideal intern was selected in {optimalCandidatePercent*100}% of the tests {countOfBestSelections}/{Tests.Count}.");
+            var averageWinnerPosition = winnerPositions.Average();
+            var applicantCount = Tests.First().Applicants.Count;
+            var percentUntilWinner = (averageWinnerPosition / (double) applicantCount)*100;
+            Console.WriteLine($"The avg position of the winner was {averageWinnerPosition} out of {applicantCount} applicants ({percentUntilWinner.ToString("#.##")}%)");
         }
 
         private Applicant GetTheWinner(Test test)
